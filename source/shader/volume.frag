@@ -175,7 +175,6 @@ void main()
 
     float tmp = avg / counter;
     out_col = texture(transfer_func_texture, vec2(tmp, tmp));
-    out_col = vec4(1, 1, 1, 1 * tmp);
 
 #endif
 
@@ -193,7 +192,6 @@ void main()
         if (s > threshold) {
             threshold = s;
             out_col = texture(transfer_func_texture, vec2(threshold, threshold));
-            out_col = vec4(1, 1, 1, 1 * threshold);
         }
 
         // increment the ray sampling position
